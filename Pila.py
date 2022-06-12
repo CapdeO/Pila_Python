@@ -89,7 +89,4 @@ while corte != 7:
   elif corte == 6:
     print("La cantidad de elementos es: ", cant_elem)
   
-    
-  
-  
   corte = int(input("Elija una opción:"))
