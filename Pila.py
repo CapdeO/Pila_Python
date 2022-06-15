@@ -55,7 +55,7 @@ def desapilar():
   if pila_vacia == True:
     print("Pila vacía")
   else:
-    p.pop(0)
+    p.pop(cima)
     cima = cima - 1
     print("La pila es: ", p)
     cant_elem = cant_elem - 1
