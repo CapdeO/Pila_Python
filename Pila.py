@@ -6,40 +6,36 @@ cant_elem = 0
 maximo = 0
 p = []
 
-def globalizar():
-  global cima
-  global pila_llena
-  global pila_vacia
-  global cant_elem
-  global maximo
-  global p
-
 def llena ():
-  globalizar()
+  global pila_llena
   if maximo == cima + 1:
     pila_llena = True
   else:
     pila_llena = False
 
 def vacia():
-  globalizar()
+  global pila_vacia
   if cima == -1:
     pila_vacia = True
   else:
     pila_vacia = False
     
 def crear_pila():
-  globalizar()
+  global p
+  global maximo
+  global cima
   p = []
   maximo = int(input("ingrese un máximo: "))
   cima = -1
 
 def cantidad():
-  globalizar()
+  global cant_elem
   cant_elem = cima + 1
 
 def apilar():
-  globalizar()
+  global p
+  global cima
+  global cant_elem
   llena()
   if pila_llena == True:
     print("La pila está llena")
@@ -52,7 +48,9 @@ def apilar():
     
 
 def desapilar():
-  globalizar()
+  global p
+  global cima
+  global cant_elem
   vacia()
   if pila_vacia == True:
     print("Pila vacía")
